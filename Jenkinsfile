@@ -21,7 +21,7 @@ pipeline {
            }
         stage('Plan') {
             steps {
-                sscript {
+                
                      sh 'pwd;cd terraform/ ; terraform init'
                      sh "pwd;cd terraform/ ; terraform plan -out tfplan"
                      sh 'pwd;cd terraform/ ; terraform show -no-colour tfplan > tfplan.txt'
